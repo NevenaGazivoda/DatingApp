@@ -8,7 +8,7 @@ namespace API.DTOs
 {
     public class RegisterDTO
     {
-        [Required]
+        [Required] //ako negdje koristim ovaj model moram popuniti ovaj podatak
         public string Username { get; set; }
         [Required]
         public string Password { get; set; }

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace API.DTOs
 {
+    //sve dto klase odgovaraju modelima koji se vracaju korisniku u apiju (postman)
     public class LoginDTO
     {
         public string Username { get; set; }

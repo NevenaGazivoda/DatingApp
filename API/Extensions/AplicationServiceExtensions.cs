@@ -13,7 +13,8 @@ namespace API.Extensions
 {
     public static class AplicationServiceExtensions
     {
-        public static IServiceCollection AddAplicationServices(this IServiceCollection services, IConfiguration config)
+        public static IServiceCollection AddAplicationServices(this IServiceCollection services, 
+        IConfiguration config)
         {
             services.AddScoped<ITokenService, TokenService>();
             services.AddDbContext<DataContext>(options =>

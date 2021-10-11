@@ -1,4 +1,5 @@
-namespace API.Entities
+namespace API.Entities 
+// sve entiti klase odgovaraju tabelama u bazi
 {
     public class AppUser
     {
