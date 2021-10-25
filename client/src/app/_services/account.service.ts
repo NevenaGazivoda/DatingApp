@@ -2,14 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ReplaySubject } from 'rxjs';
 import {map} from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 import { User } from '../_models/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AccountService {
-  baseUrl = 'https://localhost:5001/api/';
-  private currentUserSource = new ReplaySubject<User|null>(1); 
+  baseUrl = environment.apiUrl;
+  private currentUserSource = new ReplaySubject<User>(1); 
   //objekat u koji cemo smjestiti 1 usera iz responsa
   //dodala sam <User|null>
   currentUser$ = this.currentUserSource.asObservable();
@@ -44,6 +45,6 @@ export class AccountService {
   }
   logout() {
     localStorage.removeItem('user');
-    this.currentUserSource.next(null); 
+    this.currentUserSource.next(undefined);  //bilo je null
   }
 }
