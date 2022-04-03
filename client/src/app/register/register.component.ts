@@ -12,7 +12,7 @@ import { AccountService } from '../_services/account.service';
 export class RegisterComponent implements OnInit {
   @Output() cancelRegister = new EventEmitter();
   registerForm: FormGroup = new FormGroup({});
-  maxDate!: Date;
+  maxDate: Date;
   validationErrors: string[] = [];
 
   constructor(private accountService: AccountService, private toastr: ToastrService,

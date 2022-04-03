@@ -15,9 +15,9 @@ import { MembersService } from 'src/app/_services/members.service';
 })
 export class MemberListComponent implements OnInit {
   members: Member[] |null |undefined;
-  pagination!: Pagination;
-  userParams!: UserParams;
-  user!: User;
+  pagination: Pagination;
+  userParams: UserParams;
+  user: User;
   genderList = [{value: 'male', display: 'Males'}, {value: 'female', display: 'Females'}];
 
   constructor(private memberService: MembersService){
